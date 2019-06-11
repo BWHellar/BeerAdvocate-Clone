@@ -4,12 +4,26 @@
   grid-template-columns: 1, 1fr;
   grid-gap: 1em;
   background-color: white;
-  width: 90%;
+  width: 95%;
   margin:auto;
   min-height: calc(100vh - 50px);
+  border-radius: 3px;
 }
 .Title > div:nth-child(odd){
   background-color: white;
+}
+.drops  {
+  margin-left: 12px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.TopBar {
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.Menu {
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 #logo {
   float: left;
@@ -17,6 +31,10 @@
 }
 a{
   color: #7e7f7f;
+}
+#adLogo{
+  text-align: center;
+  margin: 20px;
 }
 a:hover{
   text-decoration: none;
