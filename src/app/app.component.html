@@ -1,12 +1,97 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to To Do List!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2> Heres what you need to do for {{month}}/{{day}}/{{year}} </h2>
-<h3>{{currentFocus}}</h3>
-<ul>
-  <li *ngFor= "let currentTask of tasks">{{currentTask.description}}</li>
-</ul>
+<body>
+  <div class="TopBar">
+    <div class="Title">
+      <a href="https://www.beeradvocate.com/" id="logo">
+        <img width="200" alt="Angular Logo"  id="beeradvocate" src="https://cdn.beeradvocate.com/im/beeradvocate-nav-logo.png">
+        YOUR GO-TO RESOURCE FOR BEER. | RESPECT BEER
+      </a>
+    </div>
+    <div class="Menu">
+      <div class="dropdown">
+        <button class="dropbtn">FORUMS</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">BEERS</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">TRADING</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">PLACES</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">EVENTS</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">ARTICLES</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">SOCIETY</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">SPONSORSHIP</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <h2> BeerAdvocate: Your Go-To Resource for Beer. </h2>
+    <h3>{{currentFocus}}</h3>
+    <ul>
+      <li [class]="priorityColor(currentTask)" *ngFor= "let currentTask of tasks">{{currentTask.description}} <button (click)="editTask(currentTask)">Edit!</button></li>
+    </ul>
+      <div *ngIf="selectedTask">
+        <h3>{{selectedTask.description}}</h3>
+        <p>Task Complete? {{selectedTask.done}}</p>
+        <h3>Edit Task</h3>
+        <label>Enter Task Description:</label>
+        <input [(ngModel)]="selectedTask.description">
+        <label>Enter Task Priority (1-3):</label>
+        <br>
+        <input type="radio" [(ngModel)]="selectedTask.priority" value="1">1 (Low Priority)<br>
+        <input type="radio" [(ngModel)]="selectedTask.priority" value="2">2 (Medium Priority)<br>
+        <input type="radio" [(ngModel)]="selectedTask.priority" value="3">3 (High Priority)
+        <button (click)="finishedEditing()">Done</button>
+      </div>
+    </div>
+</body>
