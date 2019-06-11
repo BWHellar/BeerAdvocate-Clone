@@ -3,14 +3,15 @@
   display: grid;
   grid-template-columns: 1, 1fr;
   grid-gap: 1em;
-  background-color: white;
-  width: 95%;
+  background-color: black;
+  width: 1200px;
   margin:auto;
   min-height: calc(100vh - 50px);
   border-radius: 3px;
 }
-.Title > div:nth-child(odd){
-  background-color: white;
+.Inner  {
+    background-color: white;
+    height: 150%;
 }
 .drops  {
   margin-left: 12px;
@@ -19,7 +20,15 @@
 }
 .TopBar {
     margin-left: 2%;
-    margin-top: 2%;
+    margin-top: 5%;
+    position: fixed;
+}
+.NavRight {
+  float: right;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  font-size: 13px;
+  font-weight: bold;
 }
 .Menu {
   margin-bottom: 30px;
@@ -32,8 +41,7 @@
 a{
   color: #7e7f7f;
 }
-#adLogo{
-  text-align: center;
+#banner{
   margin: 20px;
 }
 a:hover{
