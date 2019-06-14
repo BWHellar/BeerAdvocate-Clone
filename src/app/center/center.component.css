@@ -10,6 +10,7 @@
    justify-content: center;
    flex-flow: column wrap;
    align-content: flex-start;
+   background-color: #dee8f9;
 }
 .News {
  align-items: flex-start;
