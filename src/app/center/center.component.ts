@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Forum } from '../models/forum.model';
+import { Events } from '../models/events.model';
 
 @Component({
   selector: 'app-center',
@@ -8,11 +9,14 @@ import { Forum } from '../models/forum.model';
 })
 export class CenterComponent {
 
-  title = 'BeerAdvocate';
-
   forumPosts: Forum[] = [
-    new Forum ["title", "postLocation"]
+    new Forum ("title", "postLocation")
   ];
+  eventsPost: Events[] = [
+    new Events ("title", "theDate", "attend")
+  ];
+
+
 
   ngOnInit() {
   }
