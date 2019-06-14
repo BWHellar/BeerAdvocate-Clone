@@ -1,9 +1,10 @@
 .Rows{
   display:flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: stretch;
   flex-direction: row;
   flex-flow: nowrap;
+  background-color: white;
 }
 .Discussion {
    align-items: flex-start;
@@ -11,22 +12,33 @@
    flex-flow: column wrap;
    align-content: flex-start;
    background-color: #dee8f9;
+   flex: 0 0 30.00%;
 }
 .News {
  align-items: flex-start;
  justify-content: center;
  flex-flow: column wrap;
  align-content: flex-start;
+flex: 0 0 40.00%;
 }
 .News img {
   padding: 5px;
   content: "";
-
+}
+.Ads {
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-content: flex-start;
+ flex: 0 0 30.00%;
 }
 .Inner  {
     background-color: white;
-    height: 150%;
+    height: 100%;
 }
 .col {
   display: flex;
+}
+#Pub {
+  border: 5px solid black;
 }

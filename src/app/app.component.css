@@ -9,6 +9,11 @@
   /* min-height: calc(100vh - 50px); */
   border-radius: 3px;
 }
+@media  {
+    .container-fluid{
+        width: 90%;
+    }
+}
 .Rows{
   display:flex;
   justify-content: space-around;
