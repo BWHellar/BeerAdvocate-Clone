@@ -9,6 +9,11 @@
   min-height: calc(100vh - 50px);
   border-radius: 3px;
 }
+
+.InnerFlex {
+  display:flex;
+  justify-content: center, space-around;
+}
 .Inner  {
     background-color: white;
     height: 150%;
@@ -33,6 +38,7 @@
 .Menu {
   margin-bottom: 30px;
   margin-top: 30px;
+  background-color: red;
 }
 #logo {
   float: left;
