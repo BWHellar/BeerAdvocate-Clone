@@ -12,9 +12,6 @@ export class CenterComponent {
   forumPosts: Forum[] = [
     new Forum ("title", "postLocation")
   ];
-  eventsPost: Events[] = [
-    new Events ("title", "theDate", "attend")
-  ];
 
 
 
