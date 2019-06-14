@@ -1,0 +1,17 @@
+.Rows{
+  display:flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-direction: row;
+}
+.Discussion {
+    display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   flex-flow: column wrap;
+   align-content: flex-start;
+}
+.Inner  {
+    background-color: white;
+    height: 150%;
+}
