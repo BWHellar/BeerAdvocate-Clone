@@ -10,9 +10,9 @@
   border-radius: 3px;
 }
 
-.InnerFlex {
+.Rows{
   display:flex;
-  justify-content: center, space-around;
+  justify-content: space-around;
 }
 .Inner  {
     background-color: white;
@@ -26,7 +26,7 @@
 .TopBar {
     margin-left: 2%;
     margin-top: 5%;
-    position: fixed;
+    /* position: fixed; */
 }
 .NavRight {
   float: right;
