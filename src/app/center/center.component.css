@@ -3,15 +3,29 @@
   justify-content: space-around;
   align-items: stretch;
   flex-direction: row;
+  flex-flow: nowrap;
 }
 .Discussion {
-    display: flex;
    align-items: flex-start;
    justify-content: center;
    flex-flow: column wrap;
    align-content: flex-start;
 }
+.News {
+ align-items: flex-start;
+ justify-content: center;
+ flex-flow: column wrap;
+ align-content: flex-start;
+}
+.News img {
+  padding: 5px;
+  content: "";
+
+}
 .Inner  {
     background-color: white;
     height: 150%;
+}
+.col {
+  display: flex;
 }
