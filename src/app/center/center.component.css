@@ -1,44 +1,27 @@
-.Rows{
-  display:flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-direction: row;
-  flex-flow: nowrap;
-  background-color: white;
+.Grid {
+  display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
 }
+
 .Discussion {
-   align-items: flex-start;
-   justify-content: center;
-   flex-flow: column wrap;
-   align-content: flex-start;
-   background-color: #dee8f9;
-   flex: 0 0 30.00%;
+  grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
 }
+
 .News {
- align-items: flex-start;
- justify-content: center;
- flex-flow: column wrap;
- align-content: flex-start;
-flex: 0 0 40.00%;
-}
-.News img {
-  padding: 5px;
-  content: "";
+  grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
 }
 .Ads {
-  align-items: flex-start;
-  justify-content: center;
-  flex-flow: column wrap;
-  align-content: flex-start;
- flex: 0 0 30.00%;
-}
-.Inner  {
-    background-color: white;
-    height: 100%;
-}
-.col {
-  display: flex;
-}
-#Pub {
-  border: 5px solid black;
+  grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
 }
